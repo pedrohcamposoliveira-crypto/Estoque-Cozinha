@@ -29,18 +29,20 @@
             </div>
             <p class="text-center mt-0 text-align">Faça login para acessar o sistema.</p>
             <div class="col-lg-8 col-md-6 col-sm-12 mt-3 mx-auto">
-                <label for="cpf" class="form-label fonte">CPF</label>
-                <input type="text" class="form-control form-control-sm" maxlength="11" id="cpf" name="cpf"
-                    placeholder="Digite seu CPF">
+                <label for="cpf" class="form-label fonte">E-mail</label>
+                <input type="text" class="form-control form-control-sm" maxlength="100" id="email" name="email"
+                    placeholder="Digite seu e-mail" style="border-color: #080808;">
             </div>
             <div class="col-lg-8 col-md-6 col-sm-12 mt-5 mx-auto">
                 <label for="senha" class="form-label fonte">Senha</label>
                 <input type="password" class="form-control form-control-sm" id="senha" name="senha"
-                    placeholder="Digite sua senha">
+                    placeholder="Digite sua senha" style="border-color: #080808;">
+
             </div>
             <div class="mx-auto mt-5" style="width: 400px;">
-                <button type="button" class="btn btn-lg" style="background-color: #E40520; color: white; width: 100%;">
+                <a href="{{ route('tela_estoque') }}" class="btn btn-lg"
+                    style="background-color: #E40520; color: white; width: 100%;">
                     Entrar →
-                </button>
+                </a>
             </div>
         @endsection

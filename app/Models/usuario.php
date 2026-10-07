@@ -12,7 +12,7 @@ class usuario extends Model
         'nome',
         'email',
         'senha',
-        'nivel'
+        'cpf'
 
 
 
