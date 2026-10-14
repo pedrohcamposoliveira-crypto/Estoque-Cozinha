@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->text('senha');
             $table->string('cpf')->unique();
+            $table->string('NIF')->unique();
             $table->timestamps();
         });
     }

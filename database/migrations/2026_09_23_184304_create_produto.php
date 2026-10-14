@@ -18,7 +18,9 @@ return new class extends Migration
             $table->unsignedBigInteger('fornecedor_id');
             $table->foreign('fornecedor_id')->references('id')->on('fornecedor')->onDelete('cascade');
             $table->string('Nome');
-            $table->string('Unidade_medida');
+            $table->string('Numero_Nota');
+            $table->string('Quantidade_entrando');
+            $table->string('Quantidade_minima');
             $table->datetime('Data_fornecimento');
             $table->date('data_validade');
             $table->string('descricao');

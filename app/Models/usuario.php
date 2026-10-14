@@ -12,9 +12,7 @@ class usuario extends Model
         'nome',
         'email',
         'senha',
-        'cpf'
-
-
-
-    ]
+        'cpf',
+        'NIF',
+    ];
 }

@@ -10,10 +10,6 @@ class categoria extends Model
 
     protected $fillable = [
         'nome_categoria',
-        'Descricao'
-
-
-
-
-    ]
+        'Descricao',
+    ];
 }
