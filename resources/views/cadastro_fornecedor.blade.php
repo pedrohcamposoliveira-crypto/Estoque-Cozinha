@@ -1,6 +1,6 @@
 @extends('Layout.cadastros')
 
-@section('title', 'fornecedor')
+@section('title', 'Cadastro de Fornecedor')
 
 @section('content')
     <header class="estoque-navbar">
@@ -10,26 +10,25 @@
             <span></span>
             <span></span>
         </button>
-        <h1 class="estoque-navbar-title"><span
-                style="color: #E40520; font-family: 'Bakbak One', sans-serif;font-size: 50px;">Cadastro</span></h1><a
-            style="font-size: 50px;font-family: 'Bakbak One', sans-serif; color: #fffefe;">de Fornecedores</a>
+        <h1 class="estoque-navbar-title">
+            <span>Cadastro</span> de Fornecedor
+        </h1>
     </header>
 
     <div class="sidebar-backdrop" data-sidebar-close></div>
     <aside class="estoque-sidebar" id="estoque-sidebar" aria-label="Menu principal" aria-hidden="true">
         <div class="estoque-sidebar-heading">
-            <span class="estoque-sidebar-brand"
-                style="font-size: 45px; font-family: 'Bakbak One', sans-serif; color: #E40520;">SESI</span>
-            <button class="sidebar-close-button" type="button" aria-label="Fechar menu" data-sidebar-close>&times;</button>
+            <span class="estoque-sidebar-brand" style="font-size: 45px; font-family: 'Bakbak One', sans-serif; color: #E40520;">SESI</span>
+            <button class="sidebar-close-button" type="button" aria-label="Fechar menu" data-sidebar-close>×</button>
         </div>
         <nav class="estoque-sidebar-nav">
-            <a class="estoque-sidebar-link active" href="{{ route('tela_estoque') }}">Estoque</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Cadastro de Usuários</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Cadastro de Produtos</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_estoque') }}">Estoque</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_produto') }}">Cadastro de Produtos</a>
             <a class="estoque-sidebar-link" href="{{ route('tela_fornecedor') }}">Cadastro de Fornecedores</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Histórico de Movimentações</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Retirada de Produtos</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Gerenciamento de Usuarios</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_historico_movimentacao') }}">Histórico de Movimentações</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_retirada_produto') }}">Retirada de Produtos</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_gestao_usuario') }}">Gerenciamento de Usuários</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_meu_usuario') }}">Meu Usuário</a>
         </nav>
     </aside>
 
@@ -48,12 +47,58 @@
             openButton.addEventListener('click', () => setSidebarOpen(true));
             closeButtons.forEach((button) => button.addEventListener('click', () => setSidebarOpen(false)));
             document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape') setSidebarOpen(false);
+                if (event.key === 'Escape') {
+                    setSidebarOpen(false);
+                }
             });
         })();
     </script>
 
-    <div class="row justify-content-center d-flex">
-        <div class="col-10  rounded shadow-lg p-3 mb-5 mt-4 bg-body-tertiary">
+    <main class="container-fluid py-4 py-md-5">
+        <div class="row justify-content-center">
+            <section class="col-12 col-lg-9" aria-label="Formulário de cadastro de fornecedor">
+                <div class="card border-0 rounded-3 shadow-lg px-3 py-4 p-md-5">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <div class="row g-4 g-lg-5">
+                            <div class="col-12 col-md-6">
+                                <label for="nome-fornecedor" class="form-label fw-semibold">Nome do fornecedor</label>
+                                <input id="nome-fornecedor" class="form-control" type="text"
+                                    placeholder="Insira o nome do fornecedor" autocomplete="organization">
+                            </div>
 
-        @endsection
+                            <div class="col-12 col-md-6">
+                                <label for="email-fornecedor" class="form-label fw-semibold">E-mail do fornecedor</label>
+                                <input id="email-fornecedor" class="form-control" type="email"
+                                    placeholder="Insira o e-mail do fornecedor" autocomplete="email">
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="telefone-fornecedor" class="form-label fw-semibold">Telefone do fornecedor</label>
+                                <input id="telefone-fornecedor" class="form-control" type="tel"
+                                    placeholder="Insira o telefone do fornecedor" autocomplete="tel">
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="cnpj-fornecedor" class="form-label fw-semibold">CNPJ do fornecedor</label>
+                                <input id="cnpj-fornecedor" class="form-control" type="text" inputmode="numeric"
+                                    placeholder="Insira o CNPJ do fornecedor">
+                            </div>
+
+                            <div class="col-12 col-lg-8 mx-auto text-center">
+                                <label for="endereco-fornecedor" class="form-label fw-semibold">Endereço do fornecedor</label>
+                                <input id="endereco-fornecedor" class="form-control" type="text"
+                                    placeholder="Insira o endereço do fornecedor" autocomplete="street-address">
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-5">
+                            <a class="btn btn-danger fw-semibold py-3 px-5" href="{{ route('tela_estoque') }}" style="background-color: #E40520; border-color: #E40520; border-radius: 25px; font-size: 18px;">
+                                Cadastrar fornecedor <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+@endsection

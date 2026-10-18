@@ -39,6 +39,11 @@
                     placeholder="Digite sua senha" style="border-color: #080808;">
 
             </div>
+            <div class="col-lg-8 col-md-6 col-sm-12 mt-3 mx-auto">
+                <a href="{{ route('tela_cadastro_usuario') }}" class="btn btn-dark btn-sm">
+                    Cadastre-se
+                </a>
+            </div>
             <div class="mx-auto mt-5" style="width: 400px;">
                 <a href="{{ route('tela_estoque') }}" class="btn btn-lg"
                     style="background-color: #E40520; color: white; width: 100%;">

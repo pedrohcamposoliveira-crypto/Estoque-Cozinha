@@ -23,13 +23,13 @@
             <button class="sidebar-close-button" type="button" aria-label="Fechar menu" data-sidebar-close>&times;</button>
         </div>
         <nav class="estoque-sidebar-nav">
-            <a class="estoque-sidebar-link active" href="{{ route('tela_estoque') }}">Estoque</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Cadastro de Usuários</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Cadastro de Produtos</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_estoque') }}">Estoque</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_produto') }}">Cadastro de Produtos</a>
             <a class="estoque-sidebar-link" href="{{ route('tela_fornecedor') }}">Cadastro de Fornecedores</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Histórico de Movimentações</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Retirada de Produtos</a>
-            <a class="estoque-sidebar-link" href="{{ route('tela_login') }}">Gerenciamento de Usuarios</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_historico_movimentacao') }}">Histórico de Movimentações</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_retirada_produto') }}">Retirada de Produtos</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_gestao_usuario') }}">Gerenciamento de Usuarios</a>
+            <a class="estoque-sidebar-link" href="{{ route('tela_meu_usuario') }}">Meu Usuário</a>
         </nav>
     </aside>
 
@@ -72,13 +72,13 @@
         </button>
 
         <div id="opcoesCadastro" style="display: none; margin-top: 10px;">
-            <button type="button" class="btn btn-outline-dark">
+            <a class="btn btn-outline-dark" href="{{ route('tela_produto') }}">
                 Produto
-            </button>
+            </a>
 
-            <button type="button" class="btn btn-danger">
+            <a class="btn btn-danger" href="{{ route('tela_fornecedor') }}">
                 Fornecedor
-            </button>
+            </a>
         </div>
 
     </div>
@@ -145,9 +145,9 @@
     </div>
     <div class="row justify-content-center d-flex">
         <div class="col-10  rounded shadow-lg p-3 mb-5 mt-4 bg-body-tertiary">
-            <button type="button"
+            <a href="{{ route('tela_historico_movimentacao') }}"
                 style="background-color: #17276f; border-color: #feffff; font-size: 10px; border-radius: 25px;"
-                class="btn btn-primary">Histórico</button>
+                class="btn btn-primary">Histórico</a>
             <h6>Produtos em Estoque</h6>
             <table class="table table table-hover">
                 <thead>
@@ -162,60 +162,7 @@
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
-                <tbody>
-
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-
-
-                        <td>Mercearia</td>
-
-
-                        <td>Fornecedor Central</td>
-
-
-                        <td>15/04/2027</td>
-
-
-                        <td>
-                            <button class="btn btn-danger btn-sm"
-                                style="background-color: #E40520; border-color: #010101"><i
-                                    class="bi bi-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Feijão</td>
-                        <td>12/09/2026</td>
-                        <td>30 kg</td>
-                        <td>Grãos</td>
-                        <td>Distribuidora Silva</td>
-                        <td>20/05/2027</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm"
-                                style="background-color: #E40520; border-color: #010101;"><i
-                                    class="bi bi-trash"></i></button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Leite</td>
-                        <td>15/09/2026</td>
-                        <td>20 L</td>
-                        <td>Laticínios</td>
-                        <td>Laticínios Brasil</td>
-                        <td>10/10/2026</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm"
-                                style="background-color: #E40520; border-color: #010101;"><i
-                                    class="bi bi-trash"></i></button>
-                        </td>
-                    </tr>
-                </tbody>
+            
             </table>
         </div>
     </div>
