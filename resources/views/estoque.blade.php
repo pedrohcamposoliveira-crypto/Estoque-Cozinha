@@ -113,7 +113,7 @@
                     </div>
 
 
-                    <h2 class="fw-bold mt-3">248</h2>
+                    <h2 class="fw-bold mt-3">0</h2>
 
                     <a>
                         Atualizado em tempo real
@@ -133,7 +133,7 @@
                         </div>
                     </div>
 
-                    <h2 class="fw-bold text-danger mt-3">12</h2>
+                    <h2 class="fw-bold text-danger mt-3">0</h2>
 
                     <a>
                         Ação imediata recomendada

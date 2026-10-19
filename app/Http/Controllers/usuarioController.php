@@ -2,20 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\usuario;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class usuarioController extends Controller
 {
+    public function cadastro(Request $request)
+    {
+        return view('cadastro');
+    }
+
     public function cadastro_usuario(Request $request)
     {
+
         // Valida o JSON bruto para não depender do Content-Type da requisição.
         $dadosJson = json_decode($request->getContent(), true);
         $dados = is_array($dadosJson) ? $dadosJson : $request->all();
 
-        Validator::make($dados, [
+        $dados = Validator::make($dados, [
             'nome' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:usuario,email',
             'senha' => 'required|string|min:8',
@@ -24,7 +30,7 @@ class usuarioController extends Controller
         ])->validate();
 
         try {
-            $usuario = new usuario();
+            $usuario = new usuario;
             $usuario->nome = $dados['nome'];
             $usuario->email = $dados['email'];
             $usuario->senha = Hash::make($dados['senha']);
@@ -77,7 +83,7 @@ class usuarioController extends Controller
 
         $request->validate([
             'nome' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:usuario,email,' . $usuario->id,
+            'email' => 'required|string|email|max:255|unique:usuario,email,'.$usuario->id,
             'senha' => 'required|string|min:8',
         ]);
 

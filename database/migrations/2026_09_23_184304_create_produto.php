@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('Numero_Nota');
             $table->string('Quantidade_entrando');
             $table->string('Quantidade_minima');
-            $table->datetime('Data_fornecimento');
+            $table->date('Data_fornecimento');
             $table->date('data_validade');
             $table->string('descricao');
             $table->timestamps();

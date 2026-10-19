@@ -12,9 +12,7 @@ class fornecedor extends Model
         'nome',
         'telefone',
         'email',
-        'endereço'
-
-
-
-    ]
+        'CNPJ',
+        'endereço',
+    ];
 }

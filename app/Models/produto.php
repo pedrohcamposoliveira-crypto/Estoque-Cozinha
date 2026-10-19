@@ -12,12 +12,11 @@ class produto extends Model
         'categoria_id',
         'fornecedor_id',
         'Nome',
-        'Unidade_medida'
-        'Data_fornecimento'
-        'data_validade'
-        'descricao'
-
-
-
-    ]
+        'Numero_Nota',
+        'Quantidade_entrando',
+        'Quantidade_minima',
+        'Data_fornecimento',
+        'data_validade',
+        'descricao',
+    ];
 }

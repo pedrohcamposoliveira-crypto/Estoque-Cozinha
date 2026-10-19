@@ -57,61 +57,85 @@
             <section class="col-12 col-lg-9" aria-label="Formulário de cadastro de produto">
                 <div class="card border-0 rounded-3 shadow-lg p-3 p-md-5">
                     <div class="card-body py-lg-5">
-                        <div class="row gy-4 gx-lg-4">
-                            <div class="col-12 col-md-4">
-                                <label for="nome-produto" class="form-label fw-semibold">Nome do produto</label>
-                                <input id="nome-produto" class="form-control" type="text"
-                                    placeholder="Insira o nome do produto">
-                            </div>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="row g-4">
+                                    <div class="col-12 col-md-4">
+                                        <label for="nome-produto" class="form-label fw-semibold">Nome do produto</label>
+                                        <input id="nome-produto" class="form-control" type="text"
+                                            placeholder="Insira o nome do produto">
+                                    </div>
 
-                            <div class="col-12 col-md-4">
-                                <label for="fornecedor-produto" class="form-label fw-semibold">Fornecedor</label>
-                                <select id="fornecedor-produto" class="form-select">
-                                    <option value="" selected>Escolha o fornecedor</option>
-                                </select>
-                            </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="fornecedor-produto" class="form-label fw-semibold">Fornecedor</label>
+                                        <select id="fornecedor-produto" class="form-select">
+                                            <option value="" selected>Escolha o fornecedor</option>
+                                        </select>
+                                    </div>
 
-                            <div class="col-12 col-md-4">
-                                <label for="categoria-produto" class="form-label fw-semibold">Categoria</label>
-                                <select id="categoria-produto" class="form-select">
-                                    <option value="" selected>Escolha a categoria</option>
-                                </select>
-                            </div>
-
-                            <div class="col-12 col-md-5">
-                                <label for="quantidade-minima" class="form-label fw-semibold">Quantidade mínima</label>
-                                <input id="quantidade-minima" class="form-control" type="number" min="0"
-                                    placeholder="Insira a quantidade mínima do produto">
-                            </div>
-
-                            <div class="col-12 col-md-3">
-                                <label for="fornecimento-dia" class="form-label fw-semibold">Data de fornecimento</label>
-                                <div class="input-group">
-                                    <input id="fornecimento-dia" class="form-control text-center px-1" type="text"
-                                        inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Dia do fornecimento">
-                                    <input class="form-control text-center px-1" type="text" inputmode="numeric"
-                                        maxlength="2" placeholder="MM" aria-label="Mês do fornecimento">
-                                    <input class="form-control text-center px-1" type="text" inputmode="numeric"
-                                        maxlength="4" placeholder="YYYY" aria-label="Ano do fornecimento">
+                                    <div class="col-12 col-md-4">
+                                        <label for="categoria-produto" class="form-label fw-semibold">Categoria</label>
+                                        <select id="categoria-produto" class="form-select">
+                                            <option value="" selected>Escolha a categoria</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-md-3">
-                                <label for="validade-dia" class="form-label fw-semibold">Data de validade</label>
-                                <div class="input-group">
-                                    <input id="validade-dia" class="form-control text-center px-1" type="text"
-                                        inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Dia da validade">
-                                    <input class="form-control text-center px-1" type="text" inputmode="numeric"
-                                        maxlength="2" placeholder="MM" aria-label="Mês da validade">
-                                    <input class="form-control text-center px-1" type="text" inputmode="numeric"
-                                        maxlength="4" placeholder="YYYY" aria-label="Ano da validade">
+                            <div class="col-12">
+                                <div class="row g-4 align-items-end">
+                                    <div class="col-12 col-md-5">
+                                        <label for="quantidade-entrando" class="form-label fw-semibold">Quantidade entrando</label>
+                                        <input id="quantidade-entrando" class="form-control" type="number" min="1"
+                                            placeholder="Insira a quantidade que esta entrando">
+                                    </div>
+
+                                    <div class="col-12 col-md-3">
+                                        <label for="fornecimento-dia" class="form-label fw-semibold">Data de fornecimento</label>
+                                        <div class="input-group">
+                                            <input id="fornecimento-dia" class="form-control text-center px-1" type="text"
+                                                inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Dia do fornecimento">
+                                            <input class="form-control text-center px-1" type="text" inputmode="numeric"
+                                                maxlength="2" placeholder="MM" aria-label="Mes do fornecimento">
+                                            <input class="form-control text-center px-1" type="text" inputmode="numeric"
+                                                maxlength="4" placeholder="YYYY" aria-label="Ano do fornecimento">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-3">
+                                        <label for="validade-dia" class="form-label fw-semibold">Data de validade</label>
+                                        <div class="input-group">
+                                            <input id="validade-dia" class="form-control text-center px-1" type="text"
+                                                inputmode="numeric" maxlength="2" placeholder="DD" aria-label="Dia da validade">
+                                            <input class="form-control text-center px-1" type="text" inputmode="numeric"
+                                                maxlength="2" placeholder="MM" aria-label="Mes da validade">
+                                            <input class="form-control text-center px-1" type="text" inputmode="numeric"
+                                                maxlength="4" placeholder="YYYY" aria-label="Ano da validade">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="row g-4 align-items-end justify-content-center">
+                                    <div class="col-12 col-md-5">
+                                        <label for="quantidade-minima" class="form-label fw-semibold">Quantidade minima</label>
+                                        <input id="quantidade-minima" class="form-control" type="number" min="0"
+                                            placeholder="Insira a quantidade minima do produto">
+                                    </div>
+
+                                    <div class="col-12 col-md-5">
+                                        <label for="numero-nota" class="form-label fw-semibold">Numero da nota</label>
+                                        <input id="numero-nota" class="form-control" type="text"
+                                            placeholder="Insira o numero da nota">
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="col-12 col-lg-8 mx-auto text-center">
-                                <label for="descricao-produto" class="form-label fw-semibold">Descrição do produto</label>
+                                <label for="descricao-produto" class="form-label fw-semibold">Descricao do produto</label>
                                 <textarea id="descricao-produto" class="form-control" rows="1"
-                                    placeholder="Insira a descrição do produto (opcional)"></textarea>
+                                    placeholder="Insira a descricao do produto (opcional)"></textarea>
                             </div>
                         </div>
 
